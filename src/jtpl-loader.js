@@ -4,13 +4,13 @@
  * @author jrs
  */
 
-const babel = require("babel-core")
+// const babel = require("babel-core")
 const compile = (source) => {
   let mTpl = source.match(/<template>([\s\S]*?)<\/template>/)
   let mScript = source.match(/<script>([\s\S]*?)<\/script>/)
 
-  tpl = mTpl ? mTpl[1] : ''
-  scripts = mScript ? mScript[1] : ''
+  let tpl = mTpl ? mTpl[1] : ''
+  let scripts = mScript ? mScript[1] : ''
 
   // scss样式文件路径后面加入scopeId和模块根元素标签名称
   const scope = createCssScopeId()
@@ -39,11 +39,12 @@ const compile = (source) => {
   })
 
   let code = `import Jtpl from 'Jtpl';` + scripts
-  return babel.transform(code, {
-    minified: true,
-    presets: ['env'],
-    sourceMaps: true
-  })
+  return code
+  // return babel.transform(code, {
+  //   minified: true,
+  //   presets: ['env'],
+  //   sourceMaps: true
+  // })
 }
 
 const createCssScopeId = () => ('scope' + random())
@@ -58,6 +59,6 @@ const parseRootTag = (tpl) => {
 
 module.exports = function(source) {
   let result = compile(source)
-  this.callback(null, result.code, result.map, result.ast)
-  return
+  // this.callback(null, result.code, result.map, result.ast)
+  return result
 }
