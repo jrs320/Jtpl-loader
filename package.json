@@ -9,7 +9,8 @@
   "keywords": [
     "html",
     "template",
-    "jtpl-loader"
+    "jtpl-loader",
+    "jtpl"
   ],
   "author": "jrs",
   "license": "ISC"

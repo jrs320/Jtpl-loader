@@ -15,7 +15,7 @@ const compile = (source) => {
   // scss样式文件路径后面加入scopeId和模块根元素标签名称
   const scope = createCssScopeId()
   const rootTagName = parseRootTag(tpl)
-  let reg = /(import.*?\.scss)(["'])([;\n\s\t])/ig
+  let reg = /(import.*?\.(?:scss|less|css))(["'])([;\n\s\t])/ig
   scripts = scripts.replace(reg, `$1?scope=${scope}$2$3`)
 
   // 添加tpl属性和create方法
