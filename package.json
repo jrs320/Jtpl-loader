@@ -1,0 +1,16 @@
+{
+  "name": "jtpl-loader",
+  "version": "0.0.1",
+  "description": "simple html template",
+  "main": "jtpl-loader.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html",
+    "template",
+    "jtpl-loader"
+  ],
+  "author": "jrs",
+  "license": "ISC"
+}
