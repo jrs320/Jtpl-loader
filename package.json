@@ -1,6 +1,6 @@
 {
   "name": "jtpl-loader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "simple html template",
   "main1": "src/jtpl-loader.js",
   "main": "lib/index.js",

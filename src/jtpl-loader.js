@@ -6,8 +6,8 @@
 
 // const babel = require("babel-core")
 const compile = (source) => {
-  let mTpl = source.match(/<template>([\s\S]*?)<\/template>/)
-  let mScript = source.match(/<script>([\s\S]*?)<\/script>/)
+  let mTpl = source.match(/<template>([\s\S]*)<\/template>/)
+  let mScript = source.match(/<script>([\s\S]*)<\/script>/)
 
   let tpl = mTpl ? mTpl[1] : ''
   let scripts = mScript ? mScript[1] : ''
